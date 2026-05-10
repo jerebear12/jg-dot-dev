@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
     <link href="~/css/app.min.css" rel="stylesheet" />
-    <meta name="hydro-config" />
-    <script defer src="~/hydro/hydro.js" asp-append-version="true"></script>
-    <script defer src="~/hydro/alpine.js" asp-append-version="true"></script>
+    <script defer src="~/js/alpine.js" asp-append-version="true"></script>
 </head>
 <body class="flex flex-col h-screen">
     <header class="bg-white shadow dark:bg-gray-800">
@@ -94,5 +92,3 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-
-<vc:blog />

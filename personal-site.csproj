@@ -9,7 +9,6 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-    <PackageReference Include="Hydro" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
