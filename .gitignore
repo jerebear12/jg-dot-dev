@@ -4,3 +4,4 @@ wwwroot/css/app.min.css
 bin
 node_modules
 obj
+wwwroot/js/alpine.js
