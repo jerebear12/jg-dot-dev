@@ -1,3 +1,6 @@
 .DS_Store
 wwwroot/css/app.min.css
-.idea/*
+.idea
+bin
+node_modules
+obj
