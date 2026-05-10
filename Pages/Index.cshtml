@@ -1,0 +1,179 @@
+﻿@page
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- TODO: Make this pretty -->
+<!-- TODO: Move the bulk of this to the "about" page -->
+<!-- TODO: List recent/popular blog entries here -->
+<!-- TODO: Throw a few core values or some intriguing quotes on here -->
+<div>
+    <div class="max-w-xl mx-auto">
+        <!-- The Header -->
+        <div class="flex bg-white rounded-lg shadow mt-6 mx-4 dark:bg-gray-800 py-2">
+            <div class="mx-2 p-1">
+                <div class="ml-3 relative inline-block !rounded-full object-cover object-center bg-sky-500">
+                    <img class="w-24 h-24" src="~/assets/images/goobersona.png" alt="A cartoon drawing of myself" />
+                </div>
+            </div>
+            <div class="mx-2 my-auto">
+                <div class="text-xl font-medium">Jeremiah Gavin</div>
+                <span>Full-Stack Software Developer</span>
+            </div>
+        </div>
+        <!-- The Description -->
+        <div>
+            <div class="mt-6 flex">
+                <div class="ml-4 px-2 py-1 text-2xl font-medium">Whoami?</div>
+            </div>
+            <div class="flex bg-white rounded-lg shadow m-4 dark:bg-gray-800 py-2">
+                <div class="mx-2 my-auto p-4">
+                    Hi! I'm Jeremiah. I'm a full-stack software developer who focuses heavily on backend development and systems design.<br /><br />I enjoy learning design patterns like clean architecture, domain driven design, the actor pattern, event sourcing, and their use cases/origins. I enjoy object oriented programming, functional(and reactive) programming, and more.<br /><br />My favorite software engineering principle is "KISS", or, "Keep It Stupid Simple". I belive simplicity is beautiful, but should not come at the cost of functionality.
+                </div>
+            </div>
+        </div>
+        <!-- Work History -->
+        <div>
+            <div class="mt-6 flex">
+                <div class="ml-4 px-2 py-1 text-2xl font-medium">Work History</div>
+            </div>
+            <div class="flex-wrap">
+                <div class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                    <div class="lg:inline-flex">
+                        <div class="text-lg">2026-Present</div>
+                        <div class="text-lg font-medium lg:pl-1">Back End Engineer &#64; <a href="https://korterra.com/">KorTerra</a></div>
+                    </div>
+                    <div class="font-medium my-2">What was/is my role?</div>
+                    <p>I work as a back end engineer, contributing to the existing system which is a micro services architecture.</p>
+                    <div class="font-medium my-2">What I've built</div>
+                    <p>So far not much! It's only been a little while that I've worked here as of the time of writing. Most of my work has been smaller contributions with the team to deliver larger features across the new and old codebases.</p>
+                </div>
+            </div>
+            <div class="flex-wrap">
+                <div class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                    <div class="lg:inline-flex">
+                        <div class="text-lg">2022-2026</div>
+                        <div class="text-lg font-medium lg:pl-1">Software Developer &#64; Business Systems International</div>
+                </div>
+                    <div class="font-medium my-2">What was/is my role?</div>
+                    <p>I worked as a fullstack software developer, contributing to the backend and frontend applications.</p>
+                    <div class="font-medium my-2">What I've built</div>
+                    <p>I worked with other developers and sysadmins to set up a self-hosted scalable object storage solution, and to integrate it with the backend and frontend architecture.</p>
+                    <br />
+                    <p>I helped orchestrate a re-write of a legacy backend, updating the tools used to their latest versions, and drastically simplifying the architecture of a backend that originally had been designed to solve a complex business case, and reused to solve a different, simpler business case.</p>
+                    <br />
+                    <p>During the rewrite of the backend, I helped design and implement a "realtime" system utilizing protocols like WebSockets in conjuction with distributed message queue technology to provide clients with real-time updates that were propogated to the client's UI components.</p>
+                    <br />
+                    <p>The real-time system required a way to not only stream events that were happening, but re-play events from the past for clients to process on an as needed basis. I helped design and build an event store using a modified event sourcing design pattern.</p>
+                    <br />
+                    <p>I helped secure media uploads to the server to prevent malicious users from abusing our public file storage API. While doing this I helped improve the reliability of media uploads by implementing the TUS resumable upload protocol in Android and iOS environments.</p>
+                </div>
+            </div>
+            <div class="flex-wrap">
+                <div class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                    <div class="lg:inline-flex">
+                        <div class="text-lg">2022-2022</div>
+                        <div class="text-lg font-medium lg:pl-1">Software Developer Intern &#64; Business Systems International</div>
+                    </div>
+                    <div class="font-medium my-2">What was my role?</div>
+                    <p>I interned as a software developer during the summer, helping where ever I was needed.</p>
+                    <div class="font-medium my-2">What I've built</div>
+                    <p>I grew familiar with sysadmin-like responsibilities while researching and testing scalable object storage solutions. I worked closely with co-workers to build file upload solutions for both the web and mobile clients.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Schooling -->
+        <div>
+            <div class="mt-6 flex">
+                <div class="ml-4 px-2 py-1 text-2xl font-medium">Schooling</div>
+            </div>
+            <div class="flex bg-white rounded-lg shadow m-4 dark:bg-gray-800 py-2">
+                <div class="mx-2 my-auto p-2">
+                    <div class="lg:inline-flex">
+                        <div class="text-lg">2020-2022</div>
+                        <div class="text-lg font-medium lg:pl-1">Software Development &#64; Hennepin Technical College</div>
+                    </div>
+                    <div class="font-medium my-2">What did I learn?</div>
+                    <p>I started with Python, moved to web development with HTML and CSS, visited some databased design basics and then dove into C# and the dotnet ecosystem. We were introduced to dotnet development through a variety of applications including WinForms, Xamarin, ASP.Net Core, Blazor, and more.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Projects -->
+        <div>
+            <div class="mt-6 flex">
+                <div class="ml-4 px-2 py-1 text-2xl font-medium">Projects</div>
+            </div>
+            <div class="flex-wrap">
+                <div class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                    <div class="inline-flex">
+                        <div class="text-lg font-medium">This Website -</div>
+                        <a class="text-lg text-blue-500 hover:text-blue-700 hover:underline pl-1" href="/about">About</a>
+                    </div>
+                    <div>See the about page for information about how this site was built.</div>
+                </div>
+                <div class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                    <div class="md:inline-flex">
+                        <div class="text-lg font-medium">Specification Clarification for </div>
+                        <a class="text-lg text-blue-500 hover:text-blue-700 hover:underline md:pl-1" target="_blank" href="https://github.com/durable-streams/durable-streams">durable-streams</a>
+                    </div>
+                    <div class="font-medium my-2">What is durable-streams?</div>
+                    <p>durable-streams is an open source protocol created by the people behind <a href="https://electric.ax/" class="text-blue-500 hover:text-blue-700 hover:underline">Electric</a> for serving and storing data streams in way in which they can be replayed on demand.</p>
+                    <div class="font-medium my-2">The contribution</div>
+                    <p>I contributed <a class="text-blue-500 hover:text-blue-700 hover:underline" href="https://github.com/durable-streams/durable-streams/issues?q=is%3Aissue%20author%3A%40me">a clarification</a> which prevents non-deterministic ordering of events within a stream. This is to be sure that the protocol guards against collision of events, and to prevent the case where certain subsets of data can be returned in arbitrary order from query to query.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                    <div class="md:inline-flex">
+                        <div class="text-lg font-medium">Open Source Contribution to </div>
+                        <a class="text-lg text-blue-500 hover:text-blue-700 hover:underline md:pl-1" target="_blank" href="https://github.com/seaweedfs/seaweedfs">SeaweedFS</a>
+                    </div>
+                    <div class="font-medium my-2">What is SeaweedFS?</div>
+                    <p>SeaweedFS is an S3 compatible distributed file system written in Go, built to handle small files efficiently by minimizing the amount of metadata stored per file.</p>
+                    <div class="font-medium my-2">The contribution</div>
+                    <p>I contributed <a class="text-blue-500 hover:text-blue-700 hover:underline" href="https://github.com/seaweedfs/seaweedfs/pull/3750">CORS support</a> to the Filer component. The Filer is a CRUD HTTP API that allows the underlying objects to be dealt with over the network.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                    <div class="text-lg font-medium">Many other closed source projects...</div>
+                    <span>These closed source projects are described briefly in each of the Work History panels above.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Skills -->
+        <div>
+            <div class="mt-4 flex">
+                <div class="m-4 px-2 py-1 text-2xl font-medium">Skills</div>
+            </div>
+            <div class="flex-wrap bg-white rounded-lg shadow m-4 dark:bg-gray-800 p-4">
+                <div class="mb-4">
+                    <div class="font-bold"><strong>Languages I've Used</strong></div>
+                    <div>Ordered by experience</div>
+                </div>
+                <ul class="list-disc list-inside ml-2 mr-auto">
+                    <li><span class="font-medium">C#</span> - EF Core, FP, DDD, MassTransit, SignalR, MediatR, and more</li>
+                    <li><span class="font-medium">JavaScript/TypeScript</span> - OOP, Array manipulation, and more</li>
+                    <li><span class="font-medium">Python</span> - FastAPI, Django and Scripting</li>
+                    <li><span class="font-medium">Rust</span> - Borrow Checker, HTTP APIs, Diesel ORM, Tauri, FP</li>
+                    <li><span class="font-medium">Gleam</span> - Type system, recursion and pattern matching</li>
+                    <li><span class="font-medium">Golang</span> - HTTP APIs</li>
+                </ul>
+                <div class="my-4">
+                    <div class="font-bold"><strong>Front end frameworks I've Used</strong></div>
+                    <div>Ordered by familiarity</div>
+                </div>
+                <ul class="list-disc list-inside ml-2 mr-auto">
+                    <li><span class="font-medium">Svelte</span> - Reactivity, Components, State Management and more</li>
+                    <li><span class="font-medium">AngularJS</span> - Material Design, Components, RxJS and more</li>
+                    <li><span class="font-medium">Xaml</span> - AvaloniaUI, ReactiveUI, DynamicData, MVVM</li>
+                    <li><span class="font-medium">Windows Forms</span> - Forms, Event Handlers, DataGrid, MVC</li>
+                </ul>
+                <div class="my-4">
+                    <div class="font-bold"><strong>Areas of design I enjoy</strong></div>
+                    <div>Ordered randomly</div>
+                </div>
+                <ul class="list-disc list-inside ml-2 mr-auto">
+                    <li><span class="font-medium">Database Design</span> - Relational, NoSQL, Sharding and Normalization</li>
+                    <li><span class="font-medium">Systems Design</span> - It's all tradeoffs. And integrating with existing systems.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

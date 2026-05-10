@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/app.min.css" rel="stylesheet" />
+    <meta name="hydro-config" />
+    <script defer src="~/hydro/hydro.js" asp-append-version="true"></script>
+    <script defer src="~/hydro/alpine.js" asp-append-version="true"></script>
+</head>
+<body class="flex flex-col h-screen">
+    <header class="bg-white shadow dark:bg-gray-800">
+        <nav class="bg-white border-gray-200 dark:bg-gray-900 px-3">
+            <div x-data="{ showMobileNav: false }" class="max-w-screen-xl flex flex-nowrap items-center justify-between mx-auto p-4">
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <div class="flex self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                        <div class="mx-0">jeremiahgavin</div>
+                        <div class="text-sky-500 mx-0"><strong>.</strong></div>
+                        <div class="mx-0">dev</div>
+                    </div>
+
+                </a>
+                <button x-on:click="showMobileNav = !showMobileNav" data-collapse-toggle="navbar-default" class="button inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="/about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                        </li>
+                        <li>
+                            <a href="/blog" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div x-show="showMobileNav" x-cloak class="absolute bg-white top-0 right-0 h-screen w-1/2 sm:w-2/5 mx-auto">
+                    <div class="flex flex-col">
+                        <div class="ml-auto py-5 px-2 mr-6">
+                            <div x-on:click="showMobileNav = !showMobileNav" class="button border-2 rounded px-2 button text-2xl font-semibold text-gray-600">
+                                <span>X</span>
+                            </div>
+                        </div>
+                        <div class="mt-12 mx-auto">
+                            <ul>
+                                <li class="my-4">
+                                    <a href="/about" class="mx-auto text-gray-900 dark:text-white ">About</a>
+                                </li>
+                                <li class="my-4">
+                                    <a href="/blog" class="mx-auto text-gray-900 dark:text-white ">Blog</a>
+                                </li>
+                                <li class="my-4">
+                                    <a href="/contact" class="mx-auto text-gray-900 dark:text-white ">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="grow">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-white shadow dark:bg-gray-800">
+        <div class="w-full mx-auto p-4 flex flex-wrap items-center justify-between md:justify-center">
+            <span class="mx-auto sm:mx-0 text-sm text-gray-500 text-center dark:text-gray-400">
+                <a asp-route="/index" class="hover:underline">jeremiahgavin.dev</a> 2026 All Rights Reserved
+            </span>
+            <ul class="flex my-auto sm:mt-0 mx-auto sm:mx-0 flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400">
+                <li>
+                    <a asp-route="/about" class="text-center hover:underline me-4 md:me-6 md:ml-6">About</a>
+                </li>
+                <li>
+                    <a asp-route="/contact" class="text-center hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+<vc:blog />

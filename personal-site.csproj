@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Hydro" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Components\" />
+    <None Remove="scripts\" />
+    <None Remove="Types\" />
+    <None Remove="Constants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\assets\images\" />
+    <Folder Include="scripts\" />
+    <Folder Include="Types\" />
+    <Folder Include="Constants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\js\" />
+    <Content Remove="wwwroot\css\" />
+    <Content Remove="wwwroot\assets\" />
+    <Content Remove="wwwroot\assets\images\" />
+  </ItemGroup>
+</Project>

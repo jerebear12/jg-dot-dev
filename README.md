@@ -38,3 +38,8 @@ Dev Tooling
 Mise - Tooling to manage the tooling. Go figure.
 Dotnet SDK - For C#
 Caddy - The proxy and static site hosting server of choice.
+
+
+## Notes
+
+I was wondering today, how to not copy and paste my header and footer if I'm not using a templating language of some sort. Then I came up with the idea of having one main page, and when clicking away from it, having HTMZ request for the new page, and fill the body of the page with the new HTML returned from the server. Now, the issue is, how do I handle requests to this new page? For example, if it's the /about page, how does my server know to send the /index page's HTML, with the /about page's body?

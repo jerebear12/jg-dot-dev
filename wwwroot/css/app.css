@@ -1,0 +1,13 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* Dark Reader extension support for icons - forces white color */
+[data-darkreader-mode] .darkreader-icon,
+.dark .darkreader-icon {
+    filter: brightness(0) saturate(100%) invert(100%) !important;
+}
