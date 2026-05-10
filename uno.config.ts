@@ -1,15 +1,15 @@
-import { defineConfig, presetWind3 } from 'unocss'
+import { defineConfig, presetWind3 } from "unocss";
 
 export default defineConfig({
   presets: [
     presetWind3({
-      dark: 'class',
+      dark: "class",
     }),
   ],
   cli: {
     entry: {
-      patterns: ['./**/*.cshtml', './**/*.html'],
-      outFile: 'wwwroot/css/app.min.css',
+      patterns: ["./**/*.cshtml", "./**/*.html"],
+      outFile: "wwwroot/css/app.min.css",
     },
   },
-})
+});
