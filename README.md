@@ -36,6 +36,7 @@ Backend:
 Dev Tooling
 
 Mise - Tooling to manage the tooling. Go figure.
+Aube - NPM alternative that is fast(uses PNPM strategy for speed) and written in rust. Seems like it could be vibe-coded, but so far it works.
 Dotnet SDK - For C#
 Caddy - The proxy and static site hosting server of choice.
 
