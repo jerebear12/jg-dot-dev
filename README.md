@@ -6,7 +6,7 @@ This is my personal website and blog.
 
 ## Why
 
-For fun! Specifically the fun of learning and sharing parts of my world with others through the power of the internet. 
+For fun! Specifically, the fun of learning and sharing parts of my world with others through the power of the internet. 
 
 I wanted to build a website using tools that I find fascinating and think have real value.
 

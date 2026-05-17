@@ -12,7 +12,7 @@
 
 ## Auth
 
-- OAuth with google, facebook, etc.
+- OAuth with github, google, facebook, etc.
 - Add authentication to enable sign up and in for features.
 - Add authorization to restrict certain features.
 - Use all C# based tools.
