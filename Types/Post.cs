@@ -1,26 +1,16 @@
 ﻿namespace site.Types
 {
-	public class Post
+	public sealed class Post(int id, string coverImageUrl, string title, User author)
 	{
+		public int Id { get; } = id;
 
-		public Post(Guid id, string coverImageUrl, string title, User author)
-		{
-			Id = id;
-			CoverImageUrl = coverImageUrl;
-			Title = title;
-			Author = author;
-		}
+		public string CoverImageUrl { get; } = coverImageUrl;
 
-		public Guid Id { get; }
+		public string Title { get; } = title;
 
-		public string CoverImageUrl { get; }
+		public User Author { get; } = author;
 
-		public string Title { get; }
-
-		public User Author { get; }
-
-		public DateTimeOffset CreationDate { get; }
-
+		public DateTimeOffset CreationDate { get; } = DateTimeOffset.UtcNow;
 	}
 }
 

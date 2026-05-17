@@ -1,15 +1,42 @@
 @page
+@model Blog
 @{
     ViewData["Title"] = "Blog";
 }
 
 <div>
     <div class="max-w-xl mx-auto">
-        <div class="w-auto py-2 mt-6 mb-4">
-            <div class="text-2xl font-medium">Blog</div>
-        </div>
-        <div class="flex">
-            <p>This is my personal blog, where I write about life, work and my relationship with God.</p>
+        <!-- Header -->
+        <div class="mx-4">
+            <div class="w-auto py-2 mt-6 mb-4">
+                <div class="text-2xl font-medium">Blog</div>
+            </div>
+            <div class="flex bg-white rounded-lg shadow dark:bg-gray-800 py-2">
+                <div class="mx-2 my-auto p-4">
+                    This is my personal blog, where I write about life, work and my relationship with God.
+                </div>
+            </div>
+            <!-- List of Blog Posts -->
+            <div class="flex bg-white rounded-lg shadow dark:bg-gray-800 mt-6 py-2">
+                <div class="mx-2 my-auto p-4">
+                    @if (Model.Posts is null || Model.Posts.Count == 0)
+                    {
+                        <div class="">There are no posts yet. If you want to see one here, feel free to request a topic using the <a class="text-blue-700" href="/contact">Contact</a> page.</div>
+                    }
+                    else
+                    {
+                        @foreach (var post in Model.Posts) // We assume they are already ordered by creation date
+                        {
+                            <!-- Loop through what the server returned -->
+                            <div class="flex py-2">
+                                <div class="text-lg font-bold mr-auto">@post.Title</div>
+                                <div class="ml-auto">@post.CreationDate</div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <!-- TODO: Use pagination -->
         </div>
     </div>
 </div>
