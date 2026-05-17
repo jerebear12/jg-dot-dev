@@ -19,6 +19,22 @@ cp "$SRC" "$DEST"
 echo "Copied Alpine.js to $DEST"
 '''
 
+[tasks.copy-reset]
+description = "Copy UnoCSS Tailwind reset from node_modules to wwwroot"
+run = '''
+set -e
+SRC="node_modules/@unocss/reset/tailwind.css"
+DEST="wwwroot/css/reset.css"
+
+if [ ! -f "$SRC" ]; then
+    echo "Error: $SRC not found. Run 'aube add @unocss/reset && aube install' first."
+    exit 1
+fi
+
+cp "$SRC" "$DEST"
+echo "Copied UnoCSS reset to $DEST"
+'''
+
 [tasks.watch-css]
 description = "Watch and rebuild UnoCSS styles"
 run = "unocss --watch"
