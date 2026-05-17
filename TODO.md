@@ -1,5 +1,9 @@
 # TODO
 
+## Styling
+
+- Dark mode - My retinas!!
+
 ## Performance
 
 - Add caching using Garnet
