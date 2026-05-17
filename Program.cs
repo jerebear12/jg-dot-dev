@@ -1,7 +1,17 @@
+using Microsoft.AspNetCore.Rewrite;
+using site.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+
+var blogPostSourceDirectory = builder.Configuration.GetValue<string>("PostsSourceDirectory");
+ArgumentNullException.ThrowIfNull(blogPostSourceDirectory);
+
+var blogPostDestinationDirectory = builder.Configuration.GetValue<string>("PostsDestinationDirectory");
+ArgumentNullException.ThrowIfNull(blogPostDestinationDirectory);
 
 var app = builder.Build();
 
@@ -16,10 +26,18 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UsePostGenerator(
+    new DirectoryInfo(blogPostSourceDirectory), 
+    new DirectoryInfo(blogPostDestinationDirectory));
+
 app.UseRouting();
 
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+var rewriteOptions = new RewriteOptions()
+    .AddRewrite(@"^blog/(.+)$", "blog/post?slug=$1", skipRemainingRules: true);
+app.UseRewriter(rewriteOptions);
 
 app.Run();

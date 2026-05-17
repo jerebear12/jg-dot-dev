@@ -1,5 +1,5 @@
 @page
-@model Blog
+@model site.Pages.Index
 @{
     ViewData["Title"] = "Blog";
 }
@@ -28,7 +28,7 @@
                         @foreach (var post in Model.Posts) // We assume they are already ordered by creation date
                         {
                             <!-- Loop through what the server returned -->
-                            <a href="/blog/@post.Slug" class="flex my-4">
+                            <a href="/blog/post/@post.Slug" class="flex my-4">
                                 <div class="font-medium text-lg mr-auto">@post.Title</div>
                                 <div class="ml-auto">@post.CreationDate.ToString("D")</div>
                             </a>

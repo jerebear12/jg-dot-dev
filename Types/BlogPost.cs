@@ -2,7 +2,7 @@
 
 namespace site.Types
 {
-	public sealed class Post(int id, string slug, string coverImageUrl, string title, User author, DateTimeOffset? creationDate = null)
+	public sealed class BlogPost(int id, string slug, string coverImageUrl, string title, User author, DateTimeOffset? creationDate = null)
 	{
 
 		#region Properties
