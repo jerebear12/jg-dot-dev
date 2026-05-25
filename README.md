@@ -43,4 +43,15 @@ Dev Tooling
 
 ## Notes
 
-I was wondering today, how to not copy and paste my header and footer if I'm not using a templating language of some sort. Then I came up with the idea of having one main page, and when clicking away from it, having HTMZ request for the new page, and fill the body of the page with the new HTML returned from the server. Now, the issue is, how do I handle requests to this new page? For example, if it's the /about page, how does my server know to send the /index page's HTML, with the /about page's body?
+**Q1**: I was wondering how to not copy and paste my header and footer if I'm not using a templating language of some sort. Then I came up with the idea of having one main page, and when clicking away from it, having HTMZ request for the new page, and fill the body of the page with the new HTML returned from the server. Now, the issue is, how do I handle requests to this new page? For example, if it's the /about page, how does my server know to send the /index page's HTML, with the /about page's body?
+
+**A1**: The answer to the above was to leverage razor pages' templating system. I was hoping to go without razor pages, but so far it's been really helpful.
+
+**Q2A**: How do I want to store and load blog pages? I was thinking about using plain files, opening them via dotnet on each request, add the internal text to an object and display that. 
+
+**A2A**: Why not use plain files for the content, and a sqlite database for metadata? I think that could work well.
+
+**Q2B**: Does this mean I store comments in the sqlite database too?
+
+**A2B**: I don't see why not. This will make my requests to the database synchronous. 
+
