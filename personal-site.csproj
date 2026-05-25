@@ -19,7 +19,6 @@
     <None Remove="Constants\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BlogPosts\" />
     <Folder Include="HtmlPosts\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\css\" />
