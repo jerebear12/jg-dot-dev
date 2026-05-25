@@ -47,11 +47,6 @@ Dev Tooling
 
 **A1**: The answer to the above was to leverage razor pages' templating system. I was hoping to go without razor pages, but so far it's been really helpful.
 
-**Q2A**: How do I want to store and load blog pages? I was thinking about using plain files, opening them via dotnet on each request, add the internal text to an object and display that. 
+**Q2**: How do I want to store and load blog pages? I was thinking about using plain files, opening them via dotnet on each request, add the internal text to an object and display that. 
 
-**A2A**: Why not use plain files for the content, and a sqlite database for metadata? I think that could work well.
-
-**Q2B**: Does this mean I store comments in the sqlite database too?
-
-**A2B**: I don't see why not. This will make my requests to the database synchronous. 
-
+**A2**: Why not use plain files for the content, and a database for metadata? I think that could work well.
