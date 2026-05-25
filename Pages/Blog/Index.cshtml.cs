@@ -24,12 +24,12 @@ public class Index : PageModel
 
     #region Public Methods
 
-    public async Task OnGetAsync()
+    public void OnGet()
     {
         Posts = [
-            new BlogPost(1, "test-1", "", "Test 1", new User(Guid.CreateVersion7(), "Jeremiah", "Gavin"), DateTimeOffset.UtcNow.AddDays(-1)),
-            new BlogPost(1, "test-2", "", "Test 2", new User(Guid.CreateVersion7(), "Jeremiah", "Gavin"), DateTimeOffset.UtcNow.AddDays(-7)),
-            new BlogPost(1, "test-3", "", "Test 3", new User(Guid.CreateVersion7(), "Jeremiah", "Gavin"), DateTimeOffset.UtcNow.AddDays(-14)),
+            new BlogPost(1, "test-1", "", "Test 1", new User(string.Empty, "Jeremiah", "Gavin"), DateTimeOffset.UtcNow.AddDays(-1)),
+            new BlogPost(1, "test-2", "", "Test 2", new User(string.Empty, "Jeremiah", "Gavin"), DateTimeOffset.UtcNow.AddDays(-7)),
+            new BlogPost(1, "test-3", "", "Test 3", new User(string.Empty, "Jeremiah", "Gavin"), DateTimeOffset.UtcNow.AddDays(-14)),
         ];
     }
 

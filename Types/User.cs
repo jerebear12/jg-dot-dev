@@ -5,22 +5,20 @@ namespace site.Types
 	public class User
 	{
 
-		public User(Guid id, string firstName, string lastName, string profilePicture = UrlConstants.DefaultProfilePicture)
+		public User(string id, string fullName, string displayName, string profilePicture = UrlConstants.DefaultProfilePicture)
 		{
 			Id = id;
-			FirstName = firstName;
-			LastName = lastName;
+			FullName = fullName;
+			DisplayName = displayName;
 			ProfilePicture = profilePicture;
 			CreationDate = DateTimeOffset.UtcNow;
 		}
 
-		public Guid Id { get; }
+		public string Id { get; }
 
-		public string FirstName { get; }
+		public string FullName { get; }
 
-		public string LastName { get; }
-
-		public string FullName => FirstName + " " + LastName;
+		public string DisplayName { get; }
 
 		public string ProfilePicture { get; }
 
