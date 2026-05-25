@@ -16,7 +16,6 @@ public class Post : PageModel
 
     public Task OnGetAsync(string? slug)
     {
-
         if (slug is not null)
         {
             // TODO: Load the post from the database and set it
