@@ -14,14 +14,12 @@ public class Post : PageModel
 
     #region Public Methods
 
-    public Task OnGetAsync(string? slug)
+    public void OnGet(string? slug)
     {
         if (slug is not null)
         {
             // TODO: Load the post from the database and set it
         }
-        
-        return Task.CompletedTask;
     }
 
     #endregion
