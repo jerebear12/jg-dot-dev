@@ -7,7 +7,8 @@
 2. `npx unocss`
 3. `mise run copy-reset`
 4. `mise run copy-alpine`
-5. `mise run dev`
+5. `cd ..`
+6. `mise run dev`
 
 ## What
 
@@ -29,11 +30,12 @@ This is one of my favorite parts.
 
 Frontend:
 
-1. HTMZ - Low power tools for HTML
-2. UnoCSS - Like tailwind, but better
-3. Alpine.js - Interactivity and templating
-4. Shiki - Code highlighting
-5. Markdig - Markdown to HTML
+1. Razor Pages - Templating
+2. HTMZ - Low power tools for HTML
+3. UnoCSS - Like tailwind, but better
+4. Alpine.js - Interactivity
+5. Shiki - Code highlighting
+6. Markdig - Markdown to HTML
 
 Backend:
 
@@ -59,3 +61,7 @@ Dev Tooling
 **Q2**: How do I want to store and load blog pages? I was thinking about using plain files, opening them via dotnet on each request, add the internal text to an object and display that. 
 
 **A2**: Why not use plain files for the content, and a database for metadata? I think that could work well.
+
+**Q3**: How do I want to create blogposts? 
+
+**A3**: I could write the file manually, and create a SQL script for adding its metadata to the database. I could also create an editor using Milkdown and save it directly to the database via an API call.
