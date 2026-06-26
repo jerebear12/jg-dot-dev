@@ -11,6 +11,9 @@
       <ProjectReference Include="..\Presentation\Presentation.csproj" />
     </ItemGroup>
 
-
+    <ItemGroup>
+   		<PackageReference Include="Asp.Versioning.Abstractions" Version="8.1.0" />
+     	<PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.1" />
+    </ItemGroup>
 
 </Project>
