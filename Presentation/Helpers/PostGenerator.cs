@@ -1,8 +1,8 @@
-using System.Text;
 using Markdig;
 using CSharpFunctionalExtensions;
+using Microsoft.AspNetCore.Builder;
 
-namespace site.Helpers;
+namespace Presentation.Helpers;
 
 /// <summary>
 /// Generates HTML posts from Markdown files. 

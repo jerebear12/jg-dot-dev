@@ -1,6 +1,6 @@
-﻿using site.Constants;
+﻿using Domain.Constants;
 
-namespace site.Types
+namespace Domain.Types
 {
 	public class User
 	{

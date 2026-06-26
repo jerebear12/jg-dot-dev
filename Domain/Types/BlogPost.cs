@@ -1,6 +1,5 @@
-﻿using System.Collections.Immutable;
-
-namespace site.Types
+﻿
+namespace Domain.Types
 {
 	public sealed class BlogPost(int id, string slug, string coverImageUrl, string title, User author, DateTimeOffset? creationDate = null)
 	{

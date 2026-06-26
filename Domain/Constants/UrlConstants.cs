@@ -1,4 +1,4 @@
-﻿namespace site.Constants
+﻿namespace Domain.Constants
 {
 	public sealed class UrlConstants
 	{

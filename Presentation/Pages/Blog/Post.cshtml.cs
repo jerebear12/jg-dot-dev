@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using site.Types;
+using Domain.Types;
 
 namespace site.Pages.Blog;
 

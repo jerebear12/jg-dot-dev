@@ -41,13 +41,13 @@ run = "unocss --watch"
 
 [tasks.watch-dotnet]
 description = "Run ASP.NET Core in watch mode"
-run = "dotnet watch"
+run = "dotnet watch --project \"API/API.csproj\""
 
 [tasks.dev]
 description = "Run CSS and .NET watchers in parallel"
 run = '''
 unocss --watch &
 UNOCSS_PID=$!
-dotnet watch
+dotnet watch --project "API/API.csproj"
 kill $UNOCSS_PID 2>/dev/null
 '''

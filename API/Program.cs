@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Rewrite;
-using site.Helpers;
+using Presentation;
+using Presentation.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-
+builder.Services.AddPresentation();
 
 var blogPostSourceDirectory = builder.Configuration.GetValue<string>("PostsSourceDirectory");
 ArgumentNullException.ThrowIfNull(blogPostSourceDirectory);
@@ -27,7 +27,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UsePostGenerator(
-    new DirectoryInfo(blogPostSourceDirectory), 
+    new DirectoryInfo(blogPostSourceDirectory),
     new DirectoryInfo(blogPostDestinationDirectory));
 
 app.UseRouting();

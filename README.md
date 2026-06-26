@@ -1,5 +1,14 @@
 # jeremiahgavin.dev
 
+## How To
+
+1. `cd Presentation`
+2. `aube install`
+2. `npx unocss`
+3. `mise run copy-reset`
+4. `mise run copy-alpine`
+5. `mise run dev`
+
 ## What
 
 This is my personal website and blog.
