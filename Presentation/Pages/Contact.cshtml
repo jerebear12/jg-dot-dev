@@ -1,4 +1,5 @@
-@page @{ ViewData["Title"] = "Contact"; }
+@page
+@{ ViewData["Title"] = "Contact"; }
 
 <div class="max-w-xl mx-auto">
     <!-- The Header -->
@@ -117,13 +118,13 @@
         <div class="p-4">
             <div class="flex">
                 <div class="p-1">Name</div>
-                <input
-                    name="fullname"
-                    minlength="2"
-                    maxlength="30"
-                    class="ml-auto p-1 border rounded"
-                    placeholder="Your name"
-                />
+                    <input
+                        name="fullname"
+                        minlength="2"
+                        maxlength="30"
+                        class="ml-auto p-1 border rounded"
+                        placeholder="Your name"
+                    />
             </div>
             <div class="flex mt-4">
                 <div class="p-1">Email</div>
