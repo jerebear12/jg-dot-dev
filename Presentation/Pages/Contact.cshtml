@@ -1,7 +1,4 @@
-@page
-@{
-    ViewData["Title"] = "Contact";
-}
+@page @{ ViewData["Title"] = "Contact"; }
 
 <div class="max-w-xl mx-auto">
     <!-- The Header -->
@@ -18,19 +15,27 @@
     <!-- The Profile Card -->
     <div class="mx-4 bg-white rounded-lg shadow mt-6 dark:bg-gray-800 py-2">
         <div class="flex mx-2 p-1">
-            <div class="mx-auto relative inline-block !rounded-full object-cover object-center bg-sky-500">
+            <div
+                class="mx-auto relative inline-block !rounded-full object-cover object-center bg-sky-500"
+            >
                 <!-- TODO: Someday, put a real photo of me here -->
-                <img class="w-24 h-24" src="~/assets/images/goobersona.png" alt="A cartoon drawing of myself"/>
+                <img
+                    class="w-24 h-24"
+                    src="~/assets/images/goobersona.png"
+                    alt="A cartoon drawing of myself"
+                />
             </div>
         </div>
         <div class="flex">
             <div class="mx-auto">
-                <div class="text-xl font-medium text-center p-1">Jeremiah Gavin</div>
+                <div class="text-xl font-medium text-center p-1">
+                    Jeremiah Gavin
+                </div>
                 <div class="p-1">Full-Stack Software Developer</div>
             </div>
         </div>
         <div class="mx-2 py-2">
-            <hr/>
+            <hr />
         </div>
         <!-- The Link Tree -->
         <div>
@@ -38,11 +43,19 @@
                 <div class="flex mx-2 p-2">
                     <a href="mailto:jeremiahgavin12@gmail.com" class="flex p-2">
                         <div class="p-1">
-                            <img class="darkreader-icon" src="~/assets/icons/envelope-solid-full.svg" height="48px" width="48px" alt="Envelope"/>
+                            <img
+                                class="darkreader-icon"
+                                src="~/assets/icons/envelope-solid-full.svg"
+                                height="48px"
+                                width="48px"
+                                alt="Envelope"
+                            />
                         </div>
                         <div class="ml-2">
                             <div class="font-extrabold">Email</div>
-                            <div class="hover:text-blue-700">jeremiahgavin12@gmail.com</div>
+                            <div class="hover:text-blue-700">
+                                jeremiahgavin12@gmail.com
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -51,24 +64,43 @@
                 <div class="flex mx-2 p-2">
                     <a href="https://github.com/jerebear12" class="flex p-2">
                         <div class="p-1 mr-2">
-                            <img class="darkreader-icon" src="~/assets/icons/github-brands-solid-full-dark.svg" height="48px" width="48px" alt="GitHub"/>
+                            <img
+                                class="darkreader-icon"
+                                src="~/assets/icons/github-brands-solid-full-dark.svg"
+                                height="48px"
+                                width="48px"
+                                alt="GitHub"
+                            />
                         </div>
                         <div>
                             <div class="font-extrabold">GitHub</div>
-                            <div class="hover:text-blue-700">github.com/jerebear12</div>
+                            <div class="hover:text-blue-700">
+                                github.com/jerebear12
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
             <div class="mb-2">
                 <div class="flex mx-2 p-2">
-                    <a href="https://www.linkedin.com/in/jeremiah-gavin-27941a127/" class="flex p-2">
+                    <a
+                        href="https://www.linkedin.com/in/jeremiah-gavin-27941a127/"
+                        class="flex p-2"
+                    >
                         <div class="p-1 mr-2">
-                            <img class="darkreader-icon" src="~/assets/icons/linkedin-brands-solid-full-dark.svg" height="48px" width="48px" alt="LinkedIn"/>
+                            <img
+                                class="darkreader-icon"
+                                src="~/assets/icons/linkedin-brands-solid-full-dark.svg"
+                                height="48px"
+                                width="48px"
+                                alt="LinkedIn"
+                            />
                         </div>
                         <div>
                             <div class="font-extrabold">LinkedIn</div>
-                            <div class="hover:text-blue-700">linkedin.com/in/jeremiah-gavin-27941a127</div>
+                            <div class="hover:text-blue-700">
+                                linkedin.com/in/jeremiah-gavin-27941a127
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -76,26 +108,58 @@
         </div>
     </div>
     <!-- The Contact Form -->
-    <div id="contact" class="mx-4 bg-white rounded-lg shadow mt-6 dark:bg-gray-800 py-2">
+    <form
+        method="post"
+        id="contact"
+        target="htmz"
+        class="mx-4 bg-white rounded-lg shadow mt-6 dark:bg-gray-800 py-2"
+    >
         <div class="p-4">
             <div class="flex">
                 <div class="p-1">Name</div>
-                <input name="fullname" minlength="2" maxlength="30" class="ml-auto p-1 border rounded" placeholder="Your name"/>
+                <input
+                    name="fullname"
+                    minlength="2"
+                    maxlength="30"
+                    class="ml-auto p-1 border rounded"
+                    placeholder="Your name"
+                />
             </div>
             <div class="flex mt-4">
                 <div class="p-1">Email</div>
-                <input name="email" minlength="6" maxlength="150" class="ml-auto p-1 border rounded" placeholder="you@example.com"/>
+                <input
+                    name="email"
+                    minlength="6"
+                    maxlength="150"
+                    class="ml-auto p-1 border rounded"
+                    placeholder="you@example.com"
+                />
             </div>
             <div class="flex mt-4">
                 <div class="p-1">Subject</div>
-                <input name="subject" minlength="2" maxlength="100" class="ml-auto p-1 border rounded" placeholder="What's this about?"/>
+                <input
+                    name="subject"
+                    minlength="2"
+                    maxlength="100"
+                    class="ml-auto p-1 border rounded"
+                    placeholder="What's this about?"
+                />
             </div>
             <div class="flex mt-4">
                 <div class="p-1">Message</div>
-                <textarea name="message" maxlength="3600" class="ml-auto p-1 border rounded" placeholder="Type your message here..."></textarea>
+                <textarea
+                    name="message"
+                    maxlength="3600"
+                    class="ml-auto p-1 border rounded"
+                    placeholder="Type your message here..."
+                ></textarea>
             </div>
-            <!-- TODO: Make this work someday... -->
-            <button class="w-full mt-4 p-2 bg-sky-500 border rounded text-white">Send Message</button>
+            <button
+                formaction="api/v1.0/feedback/submit#contact"
+                class="w-full mt-4 p-2 bg-sky-500 border rounded text-white"
+            >
+                Send Message
+            </button>
         </div>
-    </div>
+    </form>
 </div>

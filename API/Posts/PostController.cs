@@ -1,7 +1,8 @@
 using Asp.Versioning;
+using API.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers;
+namespace API.Posts;
 
 [ApiController]
 [ApiVersion("1.0")]

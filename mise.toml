@@ -35,6 +35,28 @@ cp "$SRC" "$DEST"
 echo "Copied UnoCSS reset to $DEST"
 '''
 
+[tasks.copy-htmz]
+description = "Copy HTMZ from node_modules to wwwroot for self-hosting"
+run = '''
+set -e
+SRC="Presentation/node_modules/htmz/index.js"
+DEST="Presentation/wwwroot/js/htmz.js"
+
+if [ ! -f "$SRC" ]; then
+    echo "Error: $SRC not found. Run 'aube add -D htmz && aube install' first."
+    exit 1
+fi
+
+SNIPPET=$(sed -n 's/.*\[`\([^`]*\)`\].*/\1/p' "$SRC")
+if [ -z "$SNIPPET" ]; then
+    echo "Error: Could not extract HTMZ snippet from $SRC"
+    exit 1
+fi
+
+echo "document.body.insertAdjacentHTML('beforeend', '${SNIPPET}');" > "$DEST"
+echo "Copied HTMZ to $DEST"
+'''
+
 [tasks.watch-css]
 description = "Watch and rebuild UnoCSS styles"
 run = "unocss --watch"
