@@ -68,7 +68,7 @@ run = "dotnet watch --project \"API/API.csproj\""
 [tasks.dev]
 description = "Run CSS and .NET watchers in parallel"
 run = '''
-unocss --watch &
+cd Presentation && aube run unocss --watch &
 UNOCSS_PID=$!
 dotnet watch --project "API/API.csproj"
 kill $UNOCSS_PID 2>/dev/null
