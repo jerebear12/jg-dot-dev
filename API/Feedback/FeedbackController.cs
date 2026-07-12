@@ -1,5 +1,6 @@
 using Asp.Versioning;
 using API.Controllers;
+using Contracts.Models;
 using Microsoft.AspNetCore.Mvc;
 using API.Feedback.Submit;
 
@@ -24,7 +25,7 @@ public class FeedbackController : RootController
         [FromForm] SubmitFeedbackRequest request,
         CancellationToken cancellationToken)
     {
-        return PartialView("_SubmitFeedbackResponse", request);
+        return PartialView("_SubmitFeedbackResponse", new SubmitFeedbackModel(request.FullName));
     }
 
     #endregion
