@@ -5,3 +5,4 @@ bin
 node_modules
 obj
 wwwroot/js/alpine.js
+API/logs
