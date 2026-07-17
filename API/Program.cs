@@ -1,13 +1,17 @@
 using API.Helpers;
 using Asp.Versioning;
+using Infrastructure;
 using Microsoft.AspNetCore.Rewrite;
 using Presentation;
 using Presentation.Helpers;
+using Resend;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddPresentation();
+builder.Services.AddInfrastructure();
 builder.Services.AddControllers();
 
 builder.Services
@@ -29,6 +33,20 @@ builder.Services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.ConfigureOptions<SwaggerGenConfiguration>();
 builder.Services.AddSwaggerGen();
+
+const string resendApiKeyKey = "RESEND_API_KEY";
+builder.Services.AddResend(options =>
+{
+    options.ApiToken = Environment.GetEnvironmentVariable(resendApiKeyKey)
+        ?? builder.Configuration[resendApiKeyKey]  // For user-secrets in dev. DON'T use appsettings.
+        ?? throw new Exception($"The API key for Resend is not set. Key must be {resendApiKeyKey}");
+});
+
+builder.Host.UseSerilog((context, configuration) =>
+{
+    configuration.Enrich.WithEnvironmentName();
+    configuration.ReadFrom.Configuration(context.Configuration);
+});
 
 var blogPostSourceDirectory = builder.Configuration.GetValue<string>("PostsSourceDirectory");
 ArgumentNullException.ThrowIfNull(blogPostSourceDirectory);

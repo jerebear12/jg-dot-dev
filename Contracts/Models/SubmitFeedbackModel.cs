@@ -1,3 +1,3 @@
 ﻿namespace Contracts.Models;
 
-public record SubmitFeedbackModel(string FullName);
+public record SubmitFeedbackModel(string? FullName, string? ErrorMessage);
